@@ -38,7 +38,7 @@ namespace DiamondKataTests
                            $" B B{Environment.NewLine}" +
                            $"C   C{Environment.NewLine}" +
                            $" B B{Environment.NewLine}" +
-                           $"  A{Environment.NewLine}";
+                           $"  A";
 
             //Act
             var actual = DiamondPrinter.Print('C');

@@ -11,18 +11,32 @@ namespace DiamondKata
             for (char character = 'A'; character <= input; character++)
             {
                 int characterDistanceFromInput = input - character;
-                int distanceFromLetterA = character - 'A';
+                int characterDistanceFromLetterA = character - 'A';
 
-                if (distanceFromLetterA > 0)
+                if (characterDistanceFromLetterA > 0)
                 {
                     builder.AppendLine();
                 }
 
                 builder.Append(' ', characterDistanceFromInput).Append(character);
 
-                if (distanceFromLetterA > 0)
+                if (characterDistanceFromLetterA > 0)
                 {
-                    builder.Append(' ', (distanceFromLetterA * 2) - 1).Append(character);
+                    builder.Append(' ', (characterDistanceFromLetterA * 2) - 1).Append(character);
+                }
+            }
+
+            for (char character = (char)(input - 1); character >= 'A'; character--)
+            {
+                int characterDistanceFromLetterA = character - 'A';
+                int characterDistanceFromInput = input - character;
+
+                builder.AppendLine();
+                builder.Append(' ', characterDistanceFromInput).Append(character);
+
+                if (characterDistanceFromLetterA > 0)
+                {
+                    builder.Append(' ', characterDistanceFromLetterA).Append(character);
                 }
             }
 
