@@ -41,7 +41,7 @@ namespace DiamondKataTests
                            $"  A";
 
             //Act
-            var actual = DiamondPrinter.Print('G');
+            var actual = DiamondPrinter.Print('C');
 
             //Assert
             Assert.Equal(expected, actual);
