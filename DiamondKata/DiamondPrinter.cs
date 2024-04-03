@@ -8,7 +8,7 @@ namespace DiamondKata
         {
             if (input < 'A' || input > 'Z')
             {
-                throw new ArgumentException("The given character is not a character from the alphabet");
+                throw new ArgumentException("The given character is not a character from the alphabet (A - Z)");
             }
 
             var builder = new StringBuilder();
@@ -41,7 +41,7 @@ namespace DiamondKata
 
                 if (characterDistanceFromLetterA > 0)
                 {
-                    builder.Append(' ', characterDistanceFromLetterA).Append(character);
+                    builder.Append(' ', (characterDistanceFromLetterA * 2) - 1).Append(character);
                 }
             }
 
