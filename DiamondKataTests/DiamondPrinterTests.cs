@@ -29,5 +29,22 @@ namespace DiamondKataTests
             //Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Print_ReturnsADiamondShapeWithLetterCOnOuterEdges_WhenGivenLetterC()
+        {
+            //Arrange
+            var expected = $"  A{Environment.NewLine}" +
+                           $" B B{Environment.NewLine}" +
+                           $"C   C{Environment.NewLine}" +
+                           $" B B{Environment.NewLine}" +
+                           $"  A{Environment.NewLine}";
+
+            //Act
+            var actual = DiamondPrinter.Print('C');
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
