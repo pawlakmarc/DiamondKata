@@ -6,6 +6,11 @@ namespace DiamondKata
     {
         public static string Print(char input)
         {
+            if (input < 'A' || input > 'Z')
+            {
+                throw new ArgumentException("The given character is not a character from the alphabet");
+            }
+
             var builder = new StringBuilder();
 
             for (char character = 'A'; character <= input; character++)
