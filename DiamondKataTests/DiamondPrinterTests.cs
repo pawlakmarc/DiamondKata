@@ -41,7 +41,7 @@ namespace DiamondKataTests
                            $"  A";
 
             //Act
-            var actual = DiamondPrinter.Print('C');
+            var actual = DiamondPrinter.Print('G');
 
             //Assert
             Assert.Equal(expected, actual);
@@ -55,6 +55,31 @@ namespace DiamondKataTests
             
             //Assert
             Assert.Throws<ArgumentException>(print);
+        }
+
+        [Fact]
+        public void Print_ReturnsADiamondShapeWithLetterGOnOuterEdges_WhenGivenLetterG()
+        {
+            //Arrange
+            var expected = $"      A{Environment.NewLine}" +
+                           $"     B B{Environment.NewLine}" +
+                           $"    C   C{Environment.NewLine}" +
+                           $"   D     D{Environment.NewLine}" +
+                           $"  E       E{Environment.NewLine}" +
+                           $" F         F{Environment.NewLine}" +
+                           $"G           G{Environment.NewLine}" +
+                           $" F         F{Environment.NewLine}" +
+                           $"  E       E{Environment.NewLine}" +
+                           $"   D     D{Environment.NewLine}" +
+                           $"    C   C{Environment.NewLine}" +
+                           $"     B B{Environment.NewLine}" +
+                           $"      A";
+
+            //Act
+            var actual = DiamondPrinter.Print('G');
+
+            //Assert
+            Assert.Equal(expected, actual);
         }
     }
 }
