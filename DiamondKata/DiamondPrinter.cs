@@ -8,7 +8,7 @@ namespace DiamondKata
 {
     public class DiamondPrinter
     {
-        public static object Print(char input)
+        public static string Print(char input)
         {
             return "A";
         }
