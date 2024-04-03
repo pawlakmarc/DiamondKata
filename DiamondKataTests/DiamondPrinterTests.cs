@@ -46,5 +46,15 @@ namespace DiamondKataTests
             //Assert
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Print_ThrowsArgumentException_WhenGivenCharacterIsNotALetter()
+        {
+            //Act
+            Action print = () => DiamondPrinter.Print('?');
+            
+            //Assert
+            Assert.Throws<ArgumentException>(print);
+        }
     }
 }
